@@ -76,8 +76,8 @@ def lorenz_calc():
 if __name__ == '__main__':
 
     pred_lor = [AB2_3D(func=Lorenz, h=.01, N=5000, x0=[1,1,1], x1=RK4(Lorenz, h=.0025, xn=[1,1,1], tn=0), tn_1=0),
-                AB2_3D(func=Lorenz, h=.01, N=5000, x0=[1.01,1,1], x1=RK4(Lorenz, h=.0025, xn=[1.1,1,1], tn=0), tn_1=0),
-                AB2_3D(func=Lorenz, h=.01, N=5000, x0=[1.3,1,1], x1=RK4(Lorenz, h=.0025, xn=[2,1,1], tn=0), tn_1=0)]
+                AB2_3D(func=Lorenz, h=.01, N=5000, x0=[1.01,1,1], x1=RK4(Lorenz, h=.0025, xn=[1.01,1,1], tn=0), tn_1=0),
+                AB2_3D(func=Lorenz, h=.01, N=5000, x0=[1.3,1,1], x1=RK4(Lorenz, h=.0025, xn=[1.3,1,1], tn=0), tn_1=0)]
 
     fig = plt.figure(figsize=plt.figaspect(0.5))
     fig.suptitle('Lorenz System Through AB2 and RK4')
